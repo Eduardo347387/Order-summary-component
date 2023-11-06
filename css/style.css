@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
 :root {
   --Pale_blue: hsl(225, 100%, 94%);
   --Bright_blue: hsl(245, 75%, 52%);
@@ -7,16 +8,17 @@
 }
 
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-image: url(../images/pattern-background-desktop.svg);
-  background-repeat: no-repeat;
-  background-position: left 0vw top -13vh;
-  background-size: cover;
-  background-color: var(--Pale_blue);
+  font-family: "Red Hat Display", sans-serif;
 }
 
 .conteiner {
@@ -24,100 +26,128 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  background-color: var(--Pale_blue);
 }
 
 .card {
-  background-color: #fff;
-  border-radius: 14px;
-  width: 365px;
-  height: 578px;
+  position: relative;
+  background-color: var(--Very_pale_blue);
+  border-radius: 1.4rem;
+  width: 35rem;
+  height: 54.8rem;
   overflow: hidden;
-  box-shadow: 2px 5px 14px hsla(223, 47%, 23%, 0.2);
+  box-shadow: 2px 10px 20px hsla(245, 75%, 52%, 0.219);
 }
 .card-header {
-  margin: 0;
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 .card-header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 .card-body {
+  margin-bottom: 1.3rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: "Red Hat Display", sans-serif;
 }
 .card-body-title {
   color: var(--Dark_blue);
-  margin-top: 28px;
-  font-size: 25px;
+  margin-bottom: 1.4rem;
+  font-size: 2.6rem;
+  font-weight: 900;
 }
 .card-body-text {
-  width: 68%;
-  margin: -10px;
+  padding: 0 4rem;
+  line-height: 2rem;
   text-align: center;
-  word-spacing: 2px;
-  font-size: 12px;
+  word-spacing: 0.1rem;
+  font-size: 1.3rem;
   color: var(--Desaturated_blue);
-  font-weight: normal;
+  font-weight: 500;
 }
 .card-body-box {
+  margin-top: 2rem;
   display: flex;
-  flex-direction: row;
-  margin: 33px;
-  background-color: var(--Very_pale_blue);
   align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  height: 85px;
+  padding: 0 1.8rem;
+  background-color: rgba(186, 186, 255, 0.1019607843);
+  border-radius: 0.8rem;
+  height: 8rem;
   width: 80%;
-  gap: 30px;
+  gap: 3rem;
   overflow: hidden;
 }
+.card-body-box-icon {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+}
 .card-body-box-icon img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card-body-box-plan {
-  margin-left: -14px;
-  height: 44px;
-  font-size: 14px;
+  margin-left: -1.2rem;
 }
 .card-body-box-plan-text {
-  font-weight: bold;
+  color: var(--Dark_blue);
+  font-size: 1.4rem;
+  font-weight: 700;
 }
-.card-body-box-plan div {
-  margin-top: 4px;
+.card-body-box-plan span {
+  margin-top: 0.6rem;
   color: var(--Desaturated_blue);
-  font-size: 13px;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 .card-body-box-change {
   color: var(--Bright_blue);
-  margin-left: 25px;
-  font-weight: bold;
-  font-size: 15px;
+  padding-left: 2.6rem;
+  font-weight: 700;
+  font-size: 1.3rem;
 }
 .card-body button {
+  margin-top: 2.5rem;
   width: 80%;
-  padding: 15px;
+  padding: 1.3rem;
   border: none;
   background-color: var(--Bright_blue);
   color: var(--Pale_blue);
-  border-radius: 9px;
-  font-weight: bold;
+  border-radius: 0.8rem;
+  font-weight: 700;
+  font-size: 1.2rem;
   box-shadow: 2px 10px 20px hsla(245, 75%, 52%, 0.3);
 }
 .card-body-cancel {
   color: var(--Desaturated_blue);
-  font-weight: bold;
-  padding: 24px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 2.4rem;
   text-decoration: none;
 }
 
 @media (max-width: 440px) {
-  body {
+  .conteiner {
     background-image: none;
     background-color: var(--Pale_blue);
-  }
-  .card-body-box-change {
-    margin-left: 5px;
   }
 }/*# sourceMappingURL=style.css.map */
